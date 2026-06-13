@@ -242,13 +242,13 @@
     drawRoofCanvas();
 
     // Stripe Live Integration (REPLACE WITH YOUR REAL LIVE KEYS)
-    const stripe = Stripe('pk_live_XXXXXXXXXXXXXXXXXXXXXXXX'); 
+    // Using Stripe Payment Link for direct live checkout 
 
     async function checkout() {
       try {
         // Since we don't have a real backend here, we'll alert the user.
         // In a real scenario, you'd call your server to create a session.
-        alert("REDIRECTING TO SECURE STRIPE CHECKOUT...\n\nPlease contact Charles Young at D.R.E.A.M. Roofing to finalize your live API keys.");
+        window.location.href = "https://buy.stripe.com/00w6oI8NicQ63xLeyB8k800";
       } catch(e) {
         alert("Payment session error — contact Charles Young directly for live setup.");
       }
