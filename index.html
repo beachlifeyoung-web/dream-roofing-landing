@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D.R.E.A.M. ROOFING | Extreme AI Marketing for Roofers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .hero-bg { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); }
+    .neon { text-shadow: 0 0 20px #00ff9f, 0 0 40px #00ff9f; }
+    .measuring-tape { background: repeating-linear-gradient(45deg, #ffd700, #ffd700 10px, #b8860b 10px, #b8860b 20px); }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,#00ff9f20_0%,transparent_70%)]"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 pt-20">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        
+        <!-- LEFT -->
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div id="logo" class="w-24 h-24 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-600 rounded-2xl flex items-center justify-center text-5xl font-black border-4 border-white shadow-2xl transform hover:rotate-12 transition-transform">DR</div>
+            <div>
+              <h1 class="text-7xl font-black tracking-tighter neon">D.R.E.A.M.</h1>
+              <p class="text-2xl text-emerald-400 font-bold">EXTREME AI MARKETING</p>
+            </div>
+          </div>
+
+          <h2 class="text-6xl md:text-7xl font-black leading-none mb-6">
+            AMERICAN NEW AGAIN<br>
+            <span class="text-emerald-400">METAL ROOFING & REPAIR</span>
+          </h2>
+
+          <p class="text-2xl text-gray-300 mb-8 max-w-lg">
+            Charles Young presents the <span class="text-emerald-400 font-bold">ULTIMATE EXTREME EDGE</span> Premium Marketing System for roofers who want to dominate Orlando storms and crush the competition.
+          </p>
+
+          <div class="flex gap-4">
+            <button onclick="showPricing()" class="bg-emerald-500 hover:bg-emerald-600 text-black font-black text-2xl px-10 py-6 rounded-2xl flex items-center gap-3 transition-all hover:scale-105">
+              <i class="fas fa-rocket"></i> GET THE EXTREME EDGE
+            </button>
+            <a href="#contact" class="border-2 border-white hover:bg-white hover:text-black font-bold text-xl px-8 py-6 rounded-2xl transition-all">BOOK A CALL</a>
+          </div>
+
+          <div class="mt-10 flex items-center gap-8 text-sm">
+            <div>✅ 100% Lead Capture</div>
+            <div>✅ AI-Powered Domination</div>
+            <div>✅ Storm-Ready Results</div>
+          </div>
+        </div>
+
+        <!-- RIGHT: CANVAS + MEASURING TAPE VISUAL -->
+        <div class="relative">
+          <div class="bg-zinc-900 border-8 border-yellow-400 p-4 rounded-3xl shadow-2xl measuring-tape">
+            <canvas id="roofCanvas" width="600" height="500" class="w-full rounded-2xl"></canvas>
+          </div>
+          <div class="absolute -top-6 -right-6 bg-emerald-500 text-black font-black px-6 py-3 rounded-xl rotate-12 shadow-xl text-xl">
+            MEASURED FOR SUCCESS
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-10 left-1/2 text-emerald-400 animate-bounce">↓ Scroll for the full package</div>
+  </section>
+
+  <!-- PACKAGE DETAILS -->
+  <section class="py-24 bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-6xl font-black text-center mb-16">THE BEST D.R.E.A.M. ROOFING SUIT EVER BUILT</h2>
+      
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="space-y-8">
+          <div class="border-l-8 border-emerald-400 pl-8">
+            <h3 class="text-3xl font-bold mb-4">Premium High-Value Package</h3>
+            <p class="text-xl text-gray-300">$4,000 – $7,000+/month Retainer</p>
+          </div>
+          <div class="prose prose-invert prose-lg max-w-none">
+            <p><strong>Owner:</strong> Charles Young — D.R.E.A.M. Roofing • American New Again Metal Roofing and Repair</p>
+            <h4 class="text-2xl font-bold mt-12">Why This Is the Best</h4>
+            <ul class="list-disc pl-6 space-y-3 text-lg">
+              <li>Highest-priced, most comprehensive bundle</li>
+              <li>Fully weaponizes D.R.E.A.M. Extreme Edge AI</li>
+              <li>Delivers massive value to $1M–$5M+ roofers</li>
+              <li>Results-based success promise with risk reversal</li>
+            </ul>
+            <h4 class="text-2xl font-bold mt-12">What's Included</h4>
+            <ul class="list-disc pl-6 space-y-3 text-lg">
+              <li>Full AI Lead Capture System</li>
+              <li>Storm Damage Response Automation</li>
+              <li>Premium Metal Roofing Marketing Suite</li>
+              <li>Local Orlando SEO Domination</li>
+              <li>24/7 AI Sales Assistant</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div id="pricing-card" class="sticky top-8 bg-zinc-900 border-4 border-emerald-500 rounded-3xl p-10">
+            <h3 class="text-4xl font-black mb-6">Ready to Launch?</h3>
+            <div class="text-6xl font-black text-emerald-400 mb-8">$4,997<span class="text-xl align-super">/mo</span></div>
+            
+            <button onclick="checkout()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-black font-black text-3xl py-8 rounded-2xl transition-all mb-6">
+              SECURE MY EXTREME EDGE NOW
+            </button>
+            
+            <p class="text-center text-sm opacity-70">Powered by Stripe • Live Mode • Instant Access</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black py-12 border-t border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-xl font-bold">Charles Young • Owner</p>
+      <p>D.R.E.A.M. Roofing • American New Again Metal Roofing and Repair • Orlando, FL</p>
+      <p class="mt-4 text-sm opacity-50">Extreme AI Marketing | All Rights Reserved 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    // Canvas measuring tape / roofing visual
+    const canvas = document.getElementById('roofCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    function drawRoofCanvas() {
+      ctx.fillStyle = '#111';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      // Roof shape
+      ctx.fillStyle = '#334155';
+      ctx.beginPath();
+      ctx.moveTo(100, 300);
+      ctx.lineTo(300, 100);
+      ctx.lineTo(500, 300);
+      ctx.closePath();
+      ctx.fill();
+      
+      // Measuring tape lines
+      ctx.strokeStyle = '#ffd700';
+      ctx.lineWidth = 4;
+      for(let i = 50; i < 550; i += 40) {
+        ctx.beginPath();
+        ctx.moveTo(i, 50);
+        ctx.lineTo(i, 450);
+        ctx.stroke();
+      }
+      
+      ctx.fillStyle = '#fff';
+      ctx.font = 'bold 24px sans-serif';
+      ctx.fillText('EXTREME EDGE', 180, 250);
+    }
+    
+    drawRoofCanvas();
+
+    // Stripe Live Integration (REPLACE WITH YOUR REAL LIVE KEYS)
+    const stripe = Stripe('pk_live_XXXXXXXXXXXXXXXXXXXXXXXX'); 
+
+    async function checkout() {
+      try {
+        alert("Payment session starting — contact Charles Young directly for live setup.");
+      } catch(e) {
+        alert("Payment session error — contact Charles Young directly for live setup.");
+      }
+    }
+
+    function showPricing() {
+      document.getElementById('pricing-card').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
